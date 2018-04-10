@@ -1,0 +1,19 @@
+public GameObject player;
+public GameObject npc;
+
+/*Program tracks player and NPC position every frame. If the distance between player and npc is greater than 2, transform position of npc to a distance of 1 from player.*/
+
+function Update(){
+
+	//Get player's position
+	Vector3 playerPos = GameObject.Find("Player").transform.position;
+
+	//Get NPC's position
+	Vector3 npcPos = GameObject.Find("npc").transform.position;
+
+	//Update NPC position based on player's position
+	if(distance between player and npc on x axis is > 2 || pdistance between player and npc on y axis is > 2){
+		Vector3 npcPos = new Vector3(player "x" position + 1,player "y" position +1,0);
+	}
+	
+}

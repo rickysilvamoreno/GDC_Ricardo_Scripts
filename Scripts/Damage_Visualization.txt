@@ -1,0 +1,30 @@
+/*4 Transparent sprites for health damage vizualizaiton*/
+
+/*Depending on the health status, when player takes damage the screen will become more opaque (color red 3 levels)*/
+
+Function Damage_Visual {
+	//Update screen every frame
+	void Update(){
+		//If player takes damage
+		if(Player.takesdamage == TRUE){
+			//If player health is between 75 and 100
+			if(health >= 75 && health < 100){
+				//Display transparent sprite image1
+				GUI.DrawTexture(Rect(0,0,Screen.width, Screen.height), picture2);
+			}
+			//If player health is between 50 and 75 
+			if(health >= 50 && health < 75){
+				GUI.DrawTexture(Rect(0,0,Screen.width, Screen.height), picture3);
+			}
+			if(health > 0 && health < 50){
+				GUI.DrawTexture(Rect(0,0,Screen.width, Screen.height), picture4);
+			}
+			if(health == 0){
+				GAMEOVER!
+			}
+		}
+		else{
+			GUI.DrawTexture(Rect(0,0,Screen.width, Screen.height), picture1);
+		}
+	}
+}
